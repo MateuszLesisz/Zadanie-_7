@@ -18,7 +18,7 @@ public class TaskMapper {
         return dto;
     }
 
-    public Task toEntity(Task task) {
+    public Task toEntity(TaskDto task) {
         Task entity = new Task();
         entity.setId(task.getId());
         entity.setDescription(task.getDescription());
