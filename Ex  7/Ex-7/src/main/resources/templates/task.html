@@ -2,14 +2,14 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title th:text="'Main Page'"> </title>
+    <title th:text="#{taskPage.title}"> </title>
 </head>
 <body>
 
 <nav>
     <div>
         <a th:href="@{/addNewTask}">
-        <button type="button" th:text="'Add task'"> </button>
+        <button type="button" th:text="#{add.button}"> </button>
         </a>
     </div>
 </nav>
