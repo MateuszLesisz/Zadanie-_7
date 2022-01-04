@@ -8,6 +8,6 @@ public class FormController {
 
     @GetMapping("addNewTask")
     public String getNewTask() {
-        return "task";
+        return "form";
     }
 }
