@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="#{mainPage.title}"></title>
+</head>
+<body>
+<nav>
+    <div>
+        <a th:href="@{/addNewTasks/1}">
+            <button type="button" th:text="#{index.nav.task} + ' 1'"></button>
+        </a>
+        <a th:href="@{/addNewTasks/2}">
+            <button type="button" th:text="#{index.nav.task} + ' 2'"></button>
+        </a>
+        <a th:href="@{/addNewTasks/3}">
+            <button type="button" th:text="#{index.nav.task} + ' 3'"></button>
+        </a>
+    </div>
+</nav>
+<h1 th:text="#{mainPage.headline}"></h1>
+</body>
+</html>
