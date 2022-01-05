@@ -21,13 +21,13 @@ public class TaskService {
     }
 
     public void create(TaskDto dto) {
-        Task project = mapper.toEntity(dto);
-        repository.save(project);
+        Task task = mapper.toEntity(dto);
+        repository.save(task);
     }
 
     public TaskDto find(Long id) {
-        Task project = repository.findById(id);
-        return mapper.toDto(project);
+        Task task = repository.findById(id);
+        return mapper.toDto(task);
     }
 }
 

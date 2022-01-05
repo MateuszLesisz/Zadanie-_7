@@ -15,26 +15,27 @@ public class TaskRepository extends FakeRepository<Long, Task> {
 
     @PostConstruct
     public void initDb() {
+
         Task threads = new Task();
         threads.setDescription("threads");
         threads.setDueDate(LocalDate.now().plusDays(WEEKEND));
-        threads.setCategory("ABC");
-        threads.setPriority(1);
+        threads.setCategory("asfas");
+        threads.setPriority(12);
         save(threads);
 
-        Task explore = new Task();
-        threads.setDescription("explore");
-        threads.setDueDate(LocalDate.now().plusDays(WEEKEND));
-        threads.setCategory("ABC");
-        threads.setPriority(1);
-        save(explore);
+        Task task2 = new Task();
+        task2.setDescription("task2");
+        task2.setDueDate(LocalDate.now());
+        task2.setCategory("12321");
+        task2.setPriority(14);
+        save(task2);
 
-        Task lines = new Task();
-        threads.setDescription("lines");
-        threads.setDueDate(LocalDate.now().plusDays(WEEKEND));
-        threads.setCategory("ABC");
-        threads.setPriority(1);
-        save(lines);
+        Task task3 = new Task();
+        task3.setDescription("task3");
+        task3.setDueDate(LocalDate.now());
+        task3.setCategory("12321");
+        task3.setPriority(14234);
+        save(task3);
 
     }
 
