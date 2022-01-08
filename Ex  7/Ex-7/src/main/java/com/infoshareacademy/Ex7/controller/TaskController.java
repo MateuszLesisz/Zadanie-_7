@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 public class TaskController {
 
-        private TaskService taskService;
+        private final TaskService taskService;
 
         public TaskController(TaskService taskService) {
             this.taskService = taskService;
@@ -19,6 +19,12 @@ public class TaskController {
         public String getNewTask(@PathVariable Long id, Model model) {
             model.addAttribute("task",taskService.find(id));
             return "task";
+        }
+
+        @GetMapping("/tasks")
+    public String getTasks(Model model) {
+            model.addAttribute("tasks", taskService.findAll());
+                    return "tasks";
         }
     }
 

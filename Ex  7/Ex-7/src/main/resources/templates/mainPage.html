@@ -6,18 +6,13 @@
 </head>
 <body>
 <nav>
+    <h1 th:text="#{mainPage.headline}"></h1>
     <div>
-        <a th:href="@{/addNewTasks/1}">
-            <button type="button" th:text="#{index.nav.task} + ' 1'"></button>
-        </a>
-        <a th:href="@{/addNewTasks/2}">
-            <button type="button" th:text="#{index.nav.task} + ' 2'"></button>
-        </a>
-        <a th:href="@{/addNewTasks/3}">
-            <button type="button" th:text="#{index.nav.task} + ' 3'"></button>
-        </a>
+       <a th:href="@{tasks}">
+           <button type="button" th:text="#{index.nav.task}"></button>
+       </a>
     </div>
 </nav>
-<h1 th:text="#{mainPage.headline}"></h1>
+
 </body>
 </html>

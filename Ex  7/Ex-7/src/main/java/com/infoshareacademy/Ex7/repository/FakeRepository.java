@@ -2,6 +2,7 @@ package com.infoshareacademy.Ex7.repository;
 
 import com.infoshareacademy.Ex7.entity.Entity;
 
+import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -21,5 +22,10 @@ public abstract class FakeRepository<T, E extends Entity<T>> {
     }
 
     abstract T nextId();
+
+    public Collection<E> findAll() {
+        return fakeDb.values();
+    }
+
 
 }
