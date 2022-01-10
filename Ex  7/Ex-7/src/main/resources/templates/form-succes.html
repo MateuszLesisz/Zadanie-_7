@@ -5,6 +5,7 @@
     <title th:text="#{formPage.title}"></title>
 </head>
 <body>
+<h2 th:text="#{succesPage.succes}"></h2>
 <nav>
     <div>
         <a th:href="@{/}">
@@ -13,7 +14,14 @@
     </div>
 </nav>
 
-<h1>'Suukces!!!'</h1>
+<h2 th:text="#{succesPage.newTask}"></h2>
+
+<div>
+    <a th:href="@{/tasks/new}">
+        <button type="button" th:text="#{add.button}"></button>
+    </a>
+</div>
+</nav>
 
 </body>
 </html>
