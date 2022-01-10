@@ -2,18 +2,19 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title th:text="#{taskPage.title}"></title>
-  <link th:href="@{css/table.css}" rel="stylesheet" type="text/css"/>
+  <title th:text="#{mainPage.title}"></title>
+  <link th:href="@{/css/table.css}" rel="stylesheet" type="text/css"/>
+
 </head>
 <body>
-<nav>
-  <div>
-    <a th:href="@{/}">
-      <button type="button" th:text="#{back.button}"></button>
-    </a>
-  </div>
-</nav>
-<h1 th:text="#{formPage.title}"></h1>
+<h1 th:text="#{mainPage.headline}"></h1>
+
+<div>
+  <a th:href="@{/addNewTask}">
+    <button type="button" th:text="#{add.button}"></button>
+  </a>
+</div>
+<br>
 
 <table>
   <tr>

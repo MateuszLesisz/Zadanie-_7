@@ -15,13 +15,13 @@ public class TaskController {
             this.taskService = taskService;
         }
 
-    @GetMapping("/addNewTasks/{id}")
+    @GetMapping("{id}")
         public String getNewTask(@PathVariable Long id, Model model) {
             model.addAttribute("task",taskService.find(id));
             return "task";
         }
 
-        @GetMapping("/tasks")
+        @GetMapping()
     public String getTasks(Model model) {
             model.addAttribute("tasks", taskService.findAll());
                     return "tasks";
