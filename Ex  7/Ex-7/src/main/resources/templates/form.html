@@ -16,7 +16,7 @@
 
     <form th:object="${task}" th:action="@{/tasks/new}" th:method="post">
         <label th:for="desc_input"> Description </label><br>
-        <input type="text" id="desc_input" th:field="*{description}"><br>
+        <textarea type="text" id="desc_input" th:field="*{description}"></textarea><br>
         <br>
         <label th:for="category_input"> Category </label><br>
         <input type="text" id="category_input" th:field="*{category}"><br>
@@ -26,9 +26,13 @@
         <br>
         <label th:for="date_input"> Date </label><br>
         <input type="date" id="date_input" th:field="*{dueDate}"><br>
+        <br>
 
+        <button type="submit">Create</button>
 
     </form>
+
+
 
 </body>
 </html>
