@@ -15,6 +15,6 @@ public enum Category {
     }
 
     public String getCategory() {
-        return category;
+        return category.toString();
     }
 }

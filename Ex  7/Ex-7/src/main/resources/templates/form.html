@@ -36,10 +36,18 @@
     <input type="number" id="priority_input" th:field="*{priority}">
     <br>
     <br>
-    <label th:for="date_input"> DeadLine</label><br>
+    <label th:for="date_input">DeadLine</label>
+    <br>
+    <div th:class="'alert alert-danger'" th:if="${#fields.hasErrors('dueDate')}">
+        <ul>
+            <li th:each="err : ${#fields.errors('dueDate')}" th:text="${err}"></li>
+        </ul>
+    </div>
+    <br>
     <input type="date" id="date_input" th:field="*{dueDate}"><br>
     <br>
     <button type="submit">Create</button>
+
 </form>
 </body>
 </html>

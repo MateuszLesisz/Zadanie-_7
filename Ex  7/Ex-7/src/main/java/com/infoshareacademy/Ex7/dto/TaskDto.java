@@ -3,6 +3,7 @@ package com.infoshareacademy.Ex7.dto;
 import com.infoshareacademy.Ex7.Enum.Category;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.validation.constraints.Future;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import java.time.LocalDate;
@@ -17,6 +18,7 @@ public class TaskDto {
     @Max(5)
     private Integer priority;
 
+    @Future
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private LocalDate dueDate;
 
