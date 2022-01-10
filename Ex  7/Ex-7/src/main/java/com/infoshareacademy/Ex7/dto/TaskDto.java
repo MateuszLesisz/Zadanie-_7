@@ -17,7 +17,7 @@ public class TaskDto {
     @Max(5)
     private Integer priority;
 
-    @DateTimeFormat(iso= DateTimeFormat.ISO.DATE)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private LocalDate dueDate;
 
     public Long getId() {

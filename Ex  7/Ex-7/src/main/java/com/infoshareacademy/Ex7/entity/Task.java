@@ -4,7 +4,7 @@ import com.infoshareacademy.Ex7.Enum.Category;
 
 import java.time.LocalDate;
 
-public class Task implements Entity<Long>{
+public class Task implements Entity<Long> {
 
     private Long id;
     private String description;

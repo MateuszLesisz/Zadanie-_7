@@ -4,7 +4,6 @@ import com.infoshareacademy.Ex7.entity.Task;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
-import java.time.LocalDate;
 import java.util.concurrent.atomic.AtomicLong;
 
 @Repository

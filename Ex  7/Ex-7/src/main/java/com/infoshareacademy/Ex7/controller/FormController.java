@@ -30,7 +30,7 @@ public class FormController {
     @PostMapping("tasks/new")
     public String sendTask(@Valid @ModelAttribute("task") TaskDto task,
                            BindingResult bindingResult) {
-        if(bindingResult.hasErrors()) {
+        if (bindingResult.hasErrors()) {
             return "form";
         }
 

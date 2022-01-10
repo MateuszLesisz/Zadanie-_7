@@ -9,22 +9,22 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 public class TaskController {
 
-        private final TaskService taskService;
+    private final TaskService taskService;
 
-        public TaskController(TaskService taskService) {
-            this.taskService = taskService;
-        }
+    public TaskController(TaskService taskService) {
+        this.taskService = taskService;
+    }
 
     @GetMapping("{id}")
-        public String getNewTask(@PathVariable Long id, Model model) {
-            model.addAttribute("task",taskService.find(id));
-            return "task";
-        }
-
-        @GetMapping()
-    public String getTasks(Model model) {
-            model.addAttribute("tasks", taskService.findAll());
-                    return "tasks";
-        }
+    public String getNewTask(@PathVariable Long id, Model model) {
+        model.addAttribute("task", taskService.find(id));
+        return "task";
     }
+
+    @GetMapping()
+    public String getTasks(Model model) {
+        model.addAttribute("tasks", taskService.findAll());
+        return "tasks";
+    }
+}
 
