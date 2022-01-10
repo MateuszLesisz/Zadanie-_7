@@ -10,6 +10,7 @@ td, th {
     padding: 8px;
 }
 
+tr:nth-child(even)
 .grey-row {
     background-color: #dddddd;
 }
