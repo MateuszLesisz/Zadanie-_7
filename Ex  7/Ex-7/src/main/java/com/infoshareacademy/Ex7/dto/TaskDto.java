@@ -2,6 +2,9 @@ package com.infoshareacademy.Ex7.dto;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Size;
 import java.time.LocalDate;
 
 public class TaskDto {
@@ -9,6 +12,9 @@ public class TaskDto {
     private Long id;
     private String description;
     private String category;
+
+    @Min(1)
+    @Max(5)
     private Integer priority;
 
     @DateTimeFormat(iso= DateTimeFormat.ISO.DATE)
