@@ -26,7 +26,10 @@
   </tr>
   <tr th:each="task : ${tasks}">
     <td th:text="${task.id}"></td>
-
+    <td th:text="${task.description}"></td>
+    <td th:text="${task.category}"></td>
+    <td th:text="${task.priority}"></td>
+    <td th:text="${task.dueDate}"></td>
   </tr>
 </table>
 
