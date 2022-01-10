@@ -1,17 +1,17 @@
 package com.infoshareacademy.Ex7.dto;
 
+import com.infoshareacademy.Ex7.Enum.Category;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.Size;
 import java.time.LocalDate;
 
 public class TaskDto {
 
     private Long id;
     private String description;
-    private String category;
+    private Category category;
 
     @Min(1)
     @Max(5)
@@ -36,11 +36,11 @@ public class TaskDto {
         this.description = description;
     }
 
-    public String getCategory() {
+    public Category getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(Category category) {
         this.category = category;
     }
 

@@ -1,12 +1,14 @@
 package com.infoshareacademy.Ex7.entity;
 
+import com.infoshareacademy.Ex7.Enum.Category;
+
 import java.time.LocalDate;
 
 public class Task implements Entity<Long>{
 
     private Long id;
     private String description;
-    private String category;
+    private Category category;
     private Integer priority;
     private LocalDate dueDate;
 
@@ -28,11 +30,11 @@ public class Task implements Entity<Long>{
         this.description = description;
     }
 
-    public String getCategory() {
+    public Category getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(Category category) {
         this.category = category;
     }
 
