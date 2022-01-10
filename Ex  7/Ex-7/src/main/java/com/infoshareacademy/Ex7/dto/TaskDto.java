@@ -1,5 +1,7 @@
 package com.infoshareacademy.Ex7.dto;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.time.LocalDate;
 
 public class TaskDto {
@@ -8,6 +10,8 @@ public class TaskDto {
     private String description;
     private String category;
     private Integer priority;
+
+    @DateTimeFormat(iso= DateTimeFormat.ISO.DATE)
     private LocalDate dueDate;
 
     public Long getId() {
