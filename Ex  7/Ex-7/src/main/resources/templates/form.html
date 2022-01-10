@@ -25,7 +25,12 @@
 
 
         <label th:for="category_input"> Category </label><br>
-        <input type="text" id="category_input" th:field="*{category}">
+
+        <select  id="category_input" th:field="*{category}">
+            <option th:each="categoryOption : ${T(com.infoshareacademy.Ex7.Enum.Category).values()}"
+            th:value="${categoryOption}" th:text="${categoryOption.category}"
+            ></option>
+        </select>
 
 
 
