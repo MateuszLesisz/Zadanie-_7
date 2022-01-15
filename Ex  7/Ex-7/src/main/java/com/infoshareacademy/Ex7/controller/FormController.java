@@ -35,6 +35,7 @@ public class FormController {
         }
 
         taskService.create(task);
+        taskService.saveToFile(task);
         return "form-succes";
     }
 
