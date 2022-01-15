@@ -33,9 +33,7 @@ public class FormController {
         if (bindingResult.hasErrors()) {
             return "form";
         }
-
         taskService.create(task);
-        taskService.saveToFile(task);
         return "form-succes";
     }
 

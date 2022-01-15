@@ -17,6 +17,7 @@ public abstract class FakeRepository<T, E extends Entity<T>> {
             entity.setId(nextId());
         }
         fakeDb.put(entity.getId(), entity);
+        persistDb();
     }
 
     public E findById(T id) {
@@ -28,6 +29,8 @@ public abstract class FakeRepository<T, E extends Entity<T>> {
     public Collection<E> findAll() {
         return fakeDb.values();
     }
+
+    abstract void persistDb();
 
 
 

@@ -48,18 +48,5 @@ public class TaskService {
         return tasks.stream().map(mapper::toDto).collect(Collectors.toList());
     }
 
-    public void saveToFile(TaskDto dto) {
-
-        Collection<Task> task = repository.findAll();
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        try {
-            Writer fileWriter = new BufferedWriter(new FileWriter("src/main/resources/taskList.json"));
-            gson.toJson(dto, fileWriter);
-            fileWriter.close();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-
-    }
 }
 
